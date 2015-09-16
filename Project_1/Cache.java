@@ -7,8 +7,10 @@ public class Cache{
 	private static int block_size;
 	private static int hit_rate;
 	private static boolean fifo;
-	private static Queue<Address> cache_mapping;
+	private static Queue<Address> cache_Associative;
+	private static ArrayList<Address> cache_Direct_Mapped;
 	private static boolean mapping_type;
+	private static Long addressBits;
 
 
 
@@ -18,7 +20,8 @@ public class Cache{
 	block_size = b;
 	hit_rate = 0;
 	fifo = f;
-	mapping_type = type;	
+	mapping_type = type;
+	addressBits = 0L;	
 	}
 
 	public static int getCache_size()
@@ -51,6 +54,16 @@ public class Cache{
 		hit_rate++;
 	}
 
+	public static Long getAddressBits()
+	{
+		return addressBits;
+	}
+
+	public static void setAddressBits(Long i)
+	{
+		addressBits = i;
+	}
+
 	public static boolean getFIFO()
 	{
 		return fifo;
@@ -61,14 +74,24 @@ public class Cache{
 		fifo = f;
 	}
 
-	public static Queue<Address> getCache_mapping()
+	public static Queue<Address> getCache_Associative()
 	{
-		return cache_mapping;
+		return cache_Associative;
 	}
 
-	public static void setCache_mapping(Queue<Address> c)
+	public static void setCache_Associative(Queue<Address> c)
 	{
-		cache_mapping = c;
+		cache_Associative = c;
+	}
+
+	public static ArrayList<Address> getCache_Direct_Mapped()
+	{
+		return cache_Direct_Mapped;
+	}
+
+	public static void setCache_Direct_Mapped(ArrayList<Address> c)
+	{
+		cache_Direct_Mapped = c;
 	}
 
 	public static boolean getMapping_type()
