@@ -5,7 +5,7 @@ import java.util.*;
 public class Cache{
 	private static int cache_size;
 	private static int block_size;
-	private static int miss_rate;
+	private static int hit_rate;
 	private static boolean fifo;
 	private static Queue<Address> cache_mapping;
 	private static boolean mapping_type;
@@ -16,7 +16,7 @@ public class Cache{
 	{
 	cache_size = c;
 	block_size = b;
-	miss_rate = 0;
+	hit_rate = 0;
 	fifo = f;
 	mapping_type = type;	
 	}
@@ -41,14 +41,14 @@ public class Cache{
 		block_size = b;
 	}
 
-	public static int getMiss_rate()
+	public static int getHit_rate()
 	{
-		return miss_rate;
+		return hit_rate;
 	}
 
-	public static void setMiss_rate()
+	public static void setHit_rate()
 	{
-		miss_rate++;
+		hit_rate++;
 	}
 
 	public static boolean getFIFO()

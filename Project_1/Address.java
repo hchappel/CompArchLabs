@@ -1,48 +1,55 @@
 public class Address{
-	private static int full_address;
-	private static boolean valid;
-	private static int block_address;
+	private int index;
+	private boolean valid;
+	private Long block_address;
 
 
-	Address()
+	public Address()
 	{
-		full_address = 0;
+		index = 0;
 		valid = false;
-		block_address = 0;
+		block_address = 0L;
 	}
 
-	public static int getFull_address()
+	public Address(int i, boolean v, Long b)
 	{
-		return full_address;
+		index = i;
+		valid = v;
+		block_address = b;	
 	}
 
-	public static void setFull_address(int add)
+	public int getIndex()
 	{
-		full_address = add;
+		return index;
+	}
+
+	public void setIndex(int add)
+	{
+		index = add;
 	}
 
 
-	public static boolean getValid()
+	public boolean getValid()
 	{
 		return valid;
 	}
 
-	public static void setValid(boolean val)
+	public void setValid(boolean val)
 	{
 		valid = val; 
 	}
-	public static int BlockAddressTag()
+	public Long getBlockAddress()
 	{
 		return block_address;
 	}
 
-	public static void setBlockAddress(int t)
+	public void setBlockAddress(Long t)
 	{
 		block_address = t;	
 	}
 
 	public String toString()
 	{
-		return Integer.toString(full_address) + Boolean.toString(valid) + Integer.toString(block_address);
+		return Long.toString(block_address);
 	}
 }
