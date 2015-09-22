@@ -1,3 +1,8 @@
+/*
+Cache object simulates the structur of a cache. The cache can be direct mapped or fully associative 
+with replacmet that is FIFO or LRU. The Cache is set and is by bytes, along with the block size.
+An arraylist is used for direct mapped and a queue is used for fully associative.
+*/
 import java.util.*;
 
 
