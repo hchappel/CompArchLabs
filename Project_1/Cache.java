@@ -61,7 +61,7 @@ OutPut: int for the cache's
 
 /*
 Method:setBlock_size - setter for block size
-Input:
+Input: int b for the size of the block
 OutPut:void
 */
 	public static void setBlock_size(int b)
@@ -71,9 +71,9 @@ OutPut:void
 
 
 /*
-Method:get - getter for
+Method:getHit_rate - getter for number of hits in the cache
 Input:none
-OutPut:
+OutPut: returns the number of hits the cache recieves
 */
 	public static int getHit_rate()
 	{
@@ -82,8 +82,8 @@ OutPut:
 
 
 /*
-Method:set - setter for
-Input:
+Method:setHit_rate - setter for
+Input:increments the hit_rate variable when a hit is identified
 OutPut:void
 */
 
@@ -94,7 +94,7 @@ OutPut:void
 
 
 /*
-Method:get - getter for
+Method:getAddressBits - getter for
 Input:none
 OutPut:
 */
@@ -105,7 +105,7 @@ OutPut:
 
 
 /*
-Method:set - setter for
+Method:setAddressBits - setter for
 Input:
 OutPut:void
 */
@@ -116,9 +116,9 @@ OutPut:void
 
 
 /*
-Method:get - getter for
+Method:getFIFO - returns true if First in First out and false if LeastRecently Used
 Input:none
-OutPut:
+OutPut: return boolean for replacement format
 */
 	public static boolean getFIFO()
 	{
@@ -127,8 +127,8 @@ OutPut:
 
 
 /*
-Method:set - setter for
-Input:
+Method:setFIFO - setter for fifo var
+Input:boolean f true if FIFO false if LRU
 OutPut:void
 */
 	public static void setFIFO(boolean f)
@@ -138,9 +138,9 @@ OutPut:void
 
 
 /*
-Method:get - getter for
+Method:getCache_Associative - getter for Queue if Fully associative if not is empty and uninitelized
 Input:none
-OutPut:
+OutPut: Queue of address for the Cache
 */
 	public static Queue<Address> getCache_Associative()
 	{
@@ -149,8 +149,8 @@ OutPut:
 
 
 /*
-Method:set - setter for
-Input:
+Method:setCache_Associative - setter if cache is fully associative
+Input: Queue of Address for cache
 OutPut:void
 */
 	public static void setCache_Associative(Queue<Address> c)
@@ -160,9 +160,9 @@ OutPut:void
 
 
 /*
-Method:get - getter for
+Method:getCache_Direct_Mapped - getter for Arraylist of addresses if direct mapped if not is unintilized
 Input:none
-OutPut:
+OutPut: ArrayList of Addresses for a direct mapped cache
 */
 	public static ArrayList<Address> getCache_Direct_Mapped()
 	{
@@ -171,8 +171,8 @@ OutPut:
 
 
 /*
-Method:set - setter for
-Input:
+Method:setCache_Direct_Mapped - setter for Direct mapped cache
+Input: Array List of Addresses for Direct mapped cache
 OutPut:void
 */
 	public static void setCache_Direct_Mapped(ArrayList<Address> c)
@@ -182,9 +182,9 @@ OutPut:void
 
 
 /*
-Method:get - getter for
+Method:getMapping_type - getter for Mapping type
 Input:none
-OutPut:
+OutPut: returns boolean true if fully associative false if direct mapped
 */
 	public static boolean getMapping_type()
 	{
@@ -193,8 +193,8 @@ OutPut:
 
 
 /*
-Method:set - setter for
-Input:
+Method:setMapping_type - setter for Mapping type
+Input:boolean type for true if fully associative false if direct mapped
 OutPut:void
 */
 	public static void setMapping_type(boolean type)
